@@ -1,5 +1,5 @@
 package fr.uvsq.poo.RPNCalculator;
-
+import fr.uvsq.poo.RPNCalculator.Exceptions.DivisionParZeroException;
 /**
  * @author GT17S
  * enum gérant les quatres opérations possibles pour la Calcalutrice RPN.
@@ -28,7 +28,7 @@ public enum OperationEnum {
 
         @Override
         public double eval(double x, double y) {
-            if(y == 0)  throw new fr.uvsq.poo.Exceptions.DivisionParZeroException();
+            if(y == 0)  throw new DivisionParZeroException();
             return x / y;
         }
 
