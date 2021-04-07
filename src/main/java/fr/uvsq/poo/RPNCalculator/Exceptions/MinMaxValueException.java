@@ -1,4 +1,4 @@
-package fr.uvsq.poo.RPNCalculator;
+package fr.uvsq.poo.RPNCalculator.Exceptions;
 
 /**
  * @author koussaila 21805388
@@ -14,18 +14,5 @@ public class MinMaxValueException extends  ArithmeticException {
     }
 
 }
-
-
-
-
-
-/
-public class MinMaxException extends ArithmeticException {
-
-
-
-}
-
-
 
 

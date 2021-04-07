@@ -28,6 +28,7 @@ public enum OperationEnum {
 
         @Override
         public double eval(double x, double y) {
+            if(y == 0)  throw new fr.uvsq.poo.Exceptions.DivisionParZeroException();
             return x / y;
         }
 

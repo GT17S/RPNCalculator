@@ -1,4 +1,4 @@
-package fr.uvsq.poo.Exceptions;
+package fr.uvsq.poo.RPNCalculator.Exceptions;
 /**
  * Excepetion pour le cas d'une devision sur 0
  * @author Koussaila 21805388
