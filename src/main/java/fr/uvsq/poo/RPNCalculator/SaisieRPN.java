@@ -52,7 +52,7 @@ public class SaisieRPN {
 
         while(moteur.isOn()) {
             System.out.println("Veuillez saisir un entier, ou une opération,ou undo pour revenir vers l'état d'avant" +
-                    "ou exit pour sortir, puis taper sur entrer");
+                    " ou exit pour sortir, puis taper sur entrer");
             try {
                 inputValues = scanneLigne();
                 string += inputValues + " ";
