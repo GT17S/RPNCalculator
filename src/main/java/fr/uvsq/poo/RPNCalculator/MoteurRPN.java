@@ -55,5 +55,5 @@ public class MoteurRPN  extends Interpreter{
     public int getTaillePile(){
         return this.pile.size();
     }
-    
+
 }
