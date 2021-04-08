@@ -1,5 +1,7 @@
 package fr.uvsq.poo.RPNCalculator;
 
+import fr.uvsq.poo.RPNCalculator.Exceptions.HandlerException;
+
 import java.util.Stack;
 
 /**
@@ -19,7 +21,9 @@ public class Undo implements Command {
      * @see  Stack
      */
 
-    public Undo(Stack<Undoable> historique) {
+    public Undo(Stack<Undoable> historique)
+    {
+        HandlerException.HandleStackSize(historique.size(), 1);
         this.derniereCommande = historique.pop();
     }
 
