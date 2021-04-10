@@ -191,4 +191,4 @@ Cette [extension]() apporte un syntaxe plus lisible pour les tests JUnit.
 
 # Projet RPNCalculator :
 ## Diagramme de classes pour le projet de RPNCalculator
-![Class Diagram](./Diagramme de classe pour le projet.PNG)
+![Class Diagram](https://github.com/uvsq-tod/rpncalc-rpn_guenane_rahmani/blob/master/Diagramme%20de%20classe%20pour%20le%20projet.PNG)
