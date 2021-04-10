@@ -188,4 +188,7 @@ Cette [extension]() apporte un syntaxe plus lisible pour les tests JUnit.
 </dependency>
 ```
 
-### Étape 4 : implémenter la classe `Account` et les tests unitaires
+#Projet RPNCalculator :
+##Diagramme de classes pour le projet de RPNCalculator
+![Class Diagram](Diagramme de classe pour le projet.PNG)
+
