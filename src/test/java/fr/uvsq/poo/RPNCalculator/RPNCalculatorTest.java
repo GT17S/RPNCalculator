@@ -3,6 +3,8 @@ package fr.uvsq.poo.RPNCalculator;
 import fr.uvsq.poo.RPNCalculator.Exceptions.DivisionParZeroException;
 import org.junit.Test;
 
+import java.util.Stack;
+
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.Is.is;
 import static org.hamcrest.core.IsEqual.equalTo;
@@ -46,5 +48,33 @@ public class RPNCalculatorTest {
     {
         OperationEnum operation=OperationEnum.DIV;
         double s= operation.eval(10, 0);
+    }
+
+    @Test
+    public void applyOperationsWork()
+    {
+        Stack<Double> s= new Stack<Double>();
+        s.push(5.0);
+        s.push(2.0);
+
+        Operations operation= new Operations(s,OperationEnum.PLUS);
+        operation.apply();
+        Double d= s.peek();
+        assertThat(d, is(equalTo(7.0)));
+    }
+
+    @Test
+    public void UndoWork()
+    {
+        Stack<Double> s= new Stack<Double>();
+        s.push(5.0);
+        s.push(2.0);
+
+        Operations operation= new Operations(s,OperationEnum.PLUS);
+        operation.apply();
+        operation.undo();
+
+        Double d= s.peek();
+        assertThat(d, is(equalTo(2.0)));
     }
 }
