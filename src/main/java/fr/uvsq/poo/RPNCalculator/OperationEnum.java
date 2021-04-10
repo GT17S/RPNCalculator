@@ -47,18 +47,20 @@ public enum OperationEnum {
 
     /**
      * Initialisation de l'opération
-     * @param operationsymbole
+     *@param operationsymbole de type chaine de caracteres string.
      */
+    @SuppressWarnings("JavaDoc")
     private OperationEnum(String operationsymbole) {
         this.operation = operationsymbole;
     }
 
     /**
      * méthode d'évaluation abstraite (redefinie pour chaque opération).
-     * @param x
-     * @param y
-     * @return
+     *@param x de type double
+     *@param y de type double
+     *@return double
      */
+    @SuppressWarnings("JavaDoc")
     public abstract double eval(double x , double y);
 
     /**

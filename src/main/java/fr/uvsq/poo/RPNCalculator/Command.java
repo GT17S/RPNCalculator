@@ -1,7 +1,7 @@
 package fr.uvsq.poo.RPNCalculator;
 
 /**
- * @author GT17S & Koussaila
+ * @author GT17S and Koussaila
  * Interface fonctionnelle Command
  */
 

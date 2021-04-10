@@ -71,8 +71,8 @@ public class SaisieRPN {
     /**
      * Scanne une ligne
      * @return operande, double ou exit
-     * @throws DivisionParZeroException
-     * @throws MinMaxValueException
+     * @throws DivisionParZeroException qui lance une exception en cas d'une division sur zero
+     * @throws MinMaxValueException qui lance une exception en cas de depassement de la valeur maximale utiliser
      */
     public String scanneLigne() throws DivisionParZeroException, MinMaxValueException
     {
@@ -103,7 +103,7 @@ public class SaisieRPN {
 
     /**
      * Retourne vrai si le string correspond à une opération
-     * @param string
+     * @param string de type chaine de caracteres string.
      * @return booleen
      */
     private boolean isOperation(String string) {
@@ -112,7 +112,7 @@ public class SaisieRPN {
 
     /**
      * Retourne une opération correspondante au string de l'opération entre par l'utulisateur
-     * @param string
+     * @param string de type chaine de caracteres string.
      * @return OperationEnum
      */
     private OperationEnum renvoieOperation(String string) {

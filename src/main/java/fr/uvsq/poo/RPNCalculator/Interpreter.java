@@ -8,6 +8,7 @@ import java.util.Stack;
  * @author GT17S
  * Class Interpreter qui interprete les differentes etapes de calcule RPN et qui permet par la suite de les stockées.
  */
+@SuppressWarnings("JavaDoc")
 public class Interpreter{
 
     private Stack<Undoable> historique;
@@ -22,7 +23,7 @@ public class Interpreter{
 
     /**
      * Exécuter une commande (Operation)
-     * @param command
+     * @param command de type Command l'interface initiale de projet.
      */
     private void applyCommand(Command command) {
         command.apply();
@@ -31,7 +32,7 @@ public class Interpreter{
     /**
      * Exécute une commande annulable puis la sauvegarder dans l'historique
      * La commande n'est pas ajouté dans l'historique si elle lance une exception.
-     * @param command
+     * @param command de type Command l'interface initiale de projet.
      */
     public void applyStoreCommand(Undoable command) {
         try {
@@ -59,7 +60,7 @@ public class Interpreter{
     }
 
     public boolean isOn() {
-        return interrupteur.estAllumer();
+        return interrupteur.EstAllumer();
     }
 
 }

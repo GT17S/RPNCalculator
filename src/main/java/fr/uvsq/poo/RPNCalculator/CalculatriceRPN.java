@@ -1,7 +1,7 @@
 package fr.uvsq.poo.RPNCalculator;
 
 /**
- * @author Koussaila 21805388 & GT17S
+ * @author Koussaila 21805388 and GT17S
  *Main
  */
 

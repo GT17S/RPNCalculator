@@ -20,7 +20,7 @@ public class Interrupteur {
     /**
      * Methode sans parameters qui verifier si l'interrupteur de la calculatrice est allumer ou pas.
      */
-    public boolean estAllumer() {
+    public boolean EstAllumer() {
         return interrupteurAllumer;
     }
 

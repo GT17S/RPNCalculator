@@ -16,7 +16,7 @@ public class Undo implements Command {
 
     /**
      * Constructeur permettant d'annuler une commande.
-     * @param historique
+     * @param historique qui une pile de operandes et operations
      * @see  Undoable
      * @see  Stack
      */

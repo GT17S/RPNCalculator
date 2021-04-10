@@ -5,6 +5,7 @@ import java.util.Stack;
  * @author koussaila 21805388
  */
 
+@SuppressWarnings("ALL")
 public class MoteurRPN  extends Interpreter{
     /**
      * la pile dans laquelle seront stockés les opérandes.
@@ -21,17 +22,17 @@ public class MoteurRPN  extends Interpreter{
     }
 
     /**
-     * ajoute une opérande nombre dans la pile, telque     -500000 <= op <= 500000
-     * @param nombre
+     * ajoute une opérande nombre dans la pile.
+     * @param  nombre de type double.
      */
     public void enregistrerNB(double nombre) {
         this.applyStoreCommand(new SauvegardeResult(pile, nombre));
     }
 
      /** applique l'opération op aux deux dernières opérandes de notre pile
-      * (lance une exception lorsque la pile ne contient pas assez d'opérandes  < 2 ).
-      * @param op
-	 */
+      * lance une exception lorsque la pile ne contient pas assez d'opérandes inferieur à deux.
+      *@param op de type OperationEnum.
+      */
     public void appliquerOperation(OperationEnum op) {
         this.applyStoreCommand(new Operations(pile, op));
     }
