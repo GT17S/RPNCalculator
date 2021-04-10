@@ -77,4 +77,32 @@ public class RPNCalculatorTest {
         Double d= s.peek();
         assertThat(d, is(equalTo(2.0)));
     }
+
+    @Test
+    public void ExitWork()
+    {
+        MoteurRPN moteurRPN= new MoteurRPN();
+
+        Stack<Double> s= new Stack<Double>();
+        s.push(5.0);
+        s.push(2.0);
+
+        Operations operation= new Operations(s,OperationEnum.PLUS);
+
+        moteurRPN.Eteindre();//quit part, quand etteint le moteur forcement on quitte le programme de la calculatrice.
+
+        if(moteurRPN.isOn()) //si moteur est allumer, on effectue l'operation sinon on le fait pas
+        operation.apply();
+
+        Double d= s.peek();
+        assertThat(d, is(equalTo(2.0)));
+    }
+
+    @Test
+    public void TestLogerString() {
+        Interpreter i = new Interpreter();
+        i.log("Bonjour!");
+        assertThat(i.getLastLog(), is(equalTo("Bonjour!")));
+    }
+
 }
