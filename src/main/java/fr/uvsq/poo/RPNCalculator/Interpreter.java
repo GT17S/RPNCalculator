@@ -60,7 +60,7 @@ public class Interpreter{
     }
 
     public boolean isOn() {
-        return interrupteur.EstAllumer();
+        return interrupteur.estAllumer();
     }
 
 }
