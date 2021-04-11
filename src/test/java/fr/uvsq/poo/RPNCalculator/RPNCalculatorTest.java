@@ -121,6 +121,15 @@ public class RPNCalculatorTest {
         Operations operation= new Operations(s,OperationEnum.PLUS);
         operation.undo();
     }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void UnhadeledOperationOnStackFail()
+    {
+        Stack<Double> s= new Stack<Double>();
+        s.push(5.0);
+
+        Operations operation= new Operations(s,OperationEnum.PLUS);
+    }
     
     @Test
     public void TestLogerString() {
