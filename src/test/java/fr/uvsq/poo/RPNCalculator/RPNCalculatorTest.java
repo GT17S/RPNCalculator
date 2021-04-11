@@ -98,6 +98,7 @@ public class RPNCalculatorTest {
         Double d= s.peek();
         assertThat(d, is(equalTo(2.0)));
     }
+
     @Test
     public void AddHandeledValueWork()
     {
@@ -112,6 +113,15 @@ public class RPNCalculatorTest {
         moteurRPN.enregistrerNB(5500001.0);
     }
 
+    @Test(expected = IllegalArgumentException.class)
+    public void UnhadeledUndoOnEmptyStackFail()
+    {
+        Stack<Double> s= new Stack<Double>();
+
+        Operations operation= new Operations(s,OperationEnum.PLUS);
+        operation.undo();
+    }
+    
     @Test
     public void TestLogerString() {
         Interpreter i = new Interpreter();
