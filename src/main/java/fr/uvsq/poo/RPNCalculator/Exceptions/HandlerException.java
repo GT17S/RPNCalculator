@@ -6,11 +6,10 @@ package fr.uvsq.poo.RPNCalculator.Exceptions;
 
 public class HandlerException {
 
-    private static final double MINIMUM_VALUE = 500000;
     private static final double MAXIMUM_VALUE = 500000;
 
     public static void HandleMinMax(double numbre) {
-        if(numbre > MAXIMUM_VALUE || numbre < -MINIMUM_VALUE) {
+        if(numbre > MAXIMUM_VALUE || numbre < -MAXIMUM_VALUE) {
             throw new MinMaxValueException();
         }
     }
