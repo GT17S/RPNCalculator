@@ -1,6 +1,6 @@
 package fr.uvsq.poo.RPNCalculator;
-
 import fr.uvsq.poo.RPNCalculator.Exceptions.DivisionParZeroException;
+import fr.uvsq.poo.RPNCalculator.Exceptions.MinMaxValueException;
 import org.junit.Test;
 
 import java.util.Stack;
@@ -50,6 +50,7 @@ public class RPNCalculatorTest {
         double s= operation.eval(10, 0);
     }
 
+
     @Test
     public void applyOperationsWork()
     {
@@ -96,6 +97,12 @@ public class RPNCalculatorTest {
 
         Double d= s.peek();
         assertThat(d, is(equalTo(2.0)));
+    }
+    @Test
+    public void AddHandeledValueWork()
+    {
+        MoteurRPN moteurRPN= new MoteurRPN();
+        moteurRPN.enregistrerNB(10.0);
     }
 
     @Test
