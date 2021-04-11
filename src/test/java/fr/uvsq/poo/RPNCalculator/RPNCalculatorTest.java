@@ -105,6 +105,13 @@ public class RPNCalculatorTest {
         moteurRPN.enregistrerNB(10.0);
     }
 
+    @Test(expected = MinMaxValueException.class)
+    public void AddUnhadeledValueFail()
+    {
+        MoteurRPN moteurRPN= new MoteurRPN();
+        moteurRPN.enregistrerNB(5500001.0);
+    }
+
     @Test
     public void TestLogerString() {
         Interpreter i = new Interpreter();
